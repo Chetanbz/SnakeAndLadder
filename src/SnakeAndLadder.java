@@ -3,9 +3,18 @@ public class SnakeAndLadder {
 
 	public static void main(String[] args) {
 		System.out.println("Please start the game ");
-		int start = 0;  /// We are initializing player 1 position as 0
 		int dieNum = (int)Math.floor(Math.random()*10)%6 + 1;
-		System.out.println(dieNum);
+		
+		int checkPlayStatus = (int)Math.floor(Math.random()*10)%3;
+		if (checkPlayStatus == 0) {
+			System.out.println(" No Play");
+		}
+		else if (checkPlayStatus == 1) {
+			System.out.println(" Ladder");
+		}
+		else  {
+			System.out.println(" Snake");
+		}
 	}
-
 }
+	
