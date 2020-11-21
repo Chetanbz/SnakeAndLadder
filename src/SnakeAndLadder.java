@@ -17,12 +17,20 @@ public class SnakeAndLadder {
 		   continue;
 		}
 		
-		if (position >100) {   // Winning Condition 
+	    //// Condition check for win, less than 0, equal to 0
+		if (position == 100)   {  // Winning Condition  & break out of loop
 			System.out.println("Player Won ");
 			break;
 		}
-		if (position <= 0) {   /// If count goes less than 0, reassign to 0
+		else if(position >100) { // Player position needs to reverse, Player stays in original position
+			System.out.println(position + " wasted turn ");
+			position -=dieNum;	
+		}
+		else if (position <= 0){ /// If count goes less than 0, reassign to 0
 			position = 0;
+		}
+		else {                  /// Play continue              
+			
 		}
 		System.out.println(position);
 		}
