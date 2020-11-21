@@ -4,8 +4,10 @@ public class SnakeAndLadder {
 	public static void main(String[] args) {
 		System.out.println("Please start the game ");
 		int position = 0;
+		int count = 0 ;     // It count number of time die thrown 
 		while (true) {
 		int dieNum = (int)Math.floor(Math.random()*10)%6 + 1;
+		count++;
 		int checkPlayStatus = (int)Math.floor(Math.random()*10)%3;
 		if (checkPlayStatus == 0) {   //Ladder condition
 			position += dieNum;
@@ -34,6 +36,7 @@ public class SnakeAndLadder {
 		}
 		System.out.println(position);
 		}
+	System.out.println("Total number of times die need to roll to win the game  is : " + count);
 	}
 }
 	
