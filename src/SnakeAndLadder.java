@@ -17,7 +17,7 @@ public class SnakeAndLadder {
 		   continue;
 		}
 		
-	    //// Condition check for win, less than 0, equal to 0
+	    //// Condition check for condtion win, less than 0, greater than 0
 		if (position == 100)   {  // Winning Condition  & break out of loop
 			System.out.println("Player Won ");
 			break;
